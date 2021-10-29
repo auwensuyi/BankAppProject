@@ -15,7 +15,7 @@ public class ScannerInput {
             scan.nextLine();
 
         }
-        scan.nextLine();
+        //scan.nextLine();
         return newInt;
     }
 

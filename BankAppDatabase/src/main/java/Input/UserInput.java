@@ -1,5 +1,7 @@
 package Input;
 
+import java.util.Random;
+
 //Getting user input using the scanner
 public class UserInput extends ScannerInput{
 
@@ -77,12 +79,13 @@ public class UserInput extends ScannerInput{
         }
     }
 
-    public static void main(String[] args) {
-        UserInput a = new UserInput();
-
-        //String userName = a.inputUserName();
-        //double withdrawal = a.inputWithdraw();
-        double Transfer = a.inputTransfer(500);
+    private String randomAccountGenerator() {
+        Random random = new Random();
+        String accountNumber = "";
+        for(int i = 0; i < 9; i++) {
+            accountNumber += random.nextInt(9);
+        }
+        return accountNumber;
     }
 
 }
