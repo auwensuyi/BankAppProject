@@ -10,13 +10,27 @@ public class User {
     public User() {
 
     }
+    public User(String username, String firstname, String lastname, String password, String accountnumber) {
+        this.username = username;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.password = password;
+        this.userAccount = new AccountInformation(accountnumber);
+    }
+
+    public User(String username, String firstname, String lastname, String password, AccountInformation userAccount) {
+        this.username = username;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.password = password;
+        this.userAccount = userAccount;
+    }
 
     public User(String username, String firstname, String lastname, String password) {
         this.username = username;
         this.firstname = firstname;
         this.lastname = lastname;
         this.password = password;
-
     }
 
     public String getUsername() {

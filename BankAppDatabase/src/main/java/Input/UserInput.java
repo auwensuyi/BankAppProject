@@ -5,7 +5,7 @@ import java.util.Random;
 //Getting user input using the scanner
 public class UserInput extends ScannerInput{
 
-    private String inputUserName() {
+    protected String inputUserName() {
         String userName = "";
         //while username is blank it will continue to ask for username
         while(userName.isBlank()){
@@ -15,7 +15,7 @@ public class UserInput extends ScannerInput{
         return userName;
     }
 
-    private String inputPassword(){
+    protected String inputPassword(){
         String password = "";
         while (password.isBlank()){
             System.out.print("Please enter password: ");
@@ -24,7 +24,7 @@ public class UserInput extends ScannerInput{
         return password;
     }
 
-    private String inputFirstName(){
+    protected String inputFirstName(){
         String firstName = "";
         while(firstName.isBlank()){
             System.out.print("Please enter first name: ");
@@ -33,7 +33,7 @@ public class UserInput extends ScannerInput{
         return firstName;
     }
 
-    private String inputLastName(){
+    protected String inputLastName(){
         String lastName = "";
         while(lastName.isBlank()){
             System.out.print("Please enter last name: ");
@@ -42,7 +42,7 @@ public class UserInput extends ScannerInput{
         return lastName;
     }
 
-    private double inputWithdraw(){
+    protected double inputWithdraw(){
         double Withdraw = 0;
         while(Withdraw <= 0){
             System.out.print("Please enter withdrawal amount: $");
@@ -51,7 +51,7 @@ public class UserInput extends ScannerInput{
         return Withdraw;
     }
 
-    private double inputDeposit(){
+    protected double inputDeposit(){
         double Deposit = 0;
         while(Deposit <= 0){
             System.out.print("Please enter deposit amount: $");
@@ -60,7 +60,7 @@ public class UserInput extends ScannerInput{
         return Deposit;
     }
 
-    private double inputTransfer(double amount){
+    protected double inputTransfer(double amount){
         double Transfer = 0;
         while(Transfer <= 0 || Transfer > amount){
             System.out.print("How much do you want to transfer?: $");
@@ -70,7 +70,7 @@ public class UserInput extends ScannerInput{
         return Transfer;
     }
 
-    private void transferMessage(double amount, double Transfer){
+    protected void transferMessage(double amount, double Transfer){
         if(Transfer == 0){
             System.out.println("Please enter an amount greater than 0.");
         }else if(Transfer > amount){
@@ -79,7 +79,7 @@ public class UserInput extends ScannerInput{
         }
     }
 
-    private String randomAccountGenerator() {
+    protected String randomAccountGenerator() {
         Random random = new Random();
         String accountNumber = "";
         for(int i = 0; i < 9; i++) {
